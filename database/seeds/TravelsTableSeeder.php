@@ -16,9 +16,9 @@ class TravelsTableSeeder extends Seeder
         for($index = 0; $index < 10; $index++){
             $travel = new Travel();
 
-            $travel->name = $faker->randomDigit();
+            $travel->name = $faker->word();
             $travel->country_name = $faker->state();
-            $travel->city_name = $faker->state();
+            $travel->city_name = $faker->city();
             $travel->departure = $faker->date('Y_m_d');
             $travel->return = $faker->date('Y_m_d');
             $travel->b_b = $faker->boolean();
